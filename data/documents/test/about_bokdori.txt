@@ -1,0 +1,4 @@
+복도리 AI 비서는 OpenAI와 LangChain을 활용한 대화형 AI 시스템입니다.
+사용자 질문에 응답하고, 문서 기반 정보를 제공하며, 보이스피싱 위험을 감지합니다.
+주요 기능으로는 대화 처리, RAG(Retrieval Augmented Generation), 보이스피싱 감지가 있습니다.
+LLM으로는 OpenAI의 GPT 모델을 사용하며, 벡터 데이터베이스로는 Chroma를 활용합니다.

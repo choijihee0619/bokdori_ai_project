@@ -1,0 +1,11 @@
+# pip install -r requirements.txt
+
+openai==1.77.0
+langchain==0.3.25
+chromadb==1.0.8
+fastapi==0.115.9
+uvicorn==0.34.2
+python-dotenv==1.1.0
+SQLAlchemy==2.0.40
+pymongo==latest
+jinja2==3.1.3

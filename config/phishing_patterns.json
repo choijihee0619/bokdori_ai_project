@@ -1,0 +1,66 @@
+{
+"version": "1.0",
+"last_updated": "2023-05-08T12:00:00Z",
+"high_risk": [
+    "계좌번호", "보안코드", "인증번호", "비밀번호", "주민등록번호", "OTP", "카드번호", 
+    "신용카드", "체크카드", "계좌이체", "본인확인", "즉시이체"
+],
+"medium_risk": [
+    "송금", "이체", "금융사고", "사기", "경찰", "검찰", "금감원", "금융감독원", 
+    "은행", "카드사", "지급정지", "예금", "법원", "국세청", "세금", "환급", "소송"
+],
+"low_risk": [
+    "급한", "긴급", "빨리", "지금 당장", "즉시", "불법", "범죄", "체포", "구속", 
+    "조사", "압류", "처벌", "벌금", "납부", "위험", "제재"
+],
+"patterns": [
+    {
+    "pattern": ".*계좌.*이체.*",
+    "risk_level": "medium"
+    },
+    {
+    "pattern": ".*OTP.*알려.*",
+    "risk_level": "high"
+    },
+    {
+    "pattern": ".*비밀번호.*말해.*",
+    "risk_level": "high"
+    },
+    {
+    "pattern": ".*카드번호.*알려.*",
+    "risk_level": "high"
+    },
+    {
+    "pattern": ".*검찰.*조사.*",
+    "risk_level": "medium"
+    },
+    {
+    "pattern": ".*경찰.*조사.*",
+    "risk_level": "medium"
+    },
+    {
+    "pattern": ".*금융감독원.*조사.*",
+    "risk_level": "medium"
+    },
+    {
+    "pattern": ".*국세청.*세금.*",
+    "risk_level": "medium"
+    },
+    {
+    "pattern": ".*법원.*소송.*",
+    "risk_level": "medium"
+    },
+    {
+    "pattern": ".*벌금.*납부.*",
+    "risk_level": "medium"
+    },
+    {
+    "pattern": ".*지금.*(바로|즉시).*송금.*",
+    "risk_level": "high"
+    },
+    {
+    "pattern": ".*(안전|보안|임시).*계좌.*",
+    "risk_level": "high"
+    }
+]
+}
