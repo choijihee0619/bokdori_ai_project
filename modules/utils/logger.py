@@ -34,26 +34,31 @@ class Logger:
             "CRITICAL": logging.CRITICAL
         }
         
+        # 핸들러 생성
+        console_handler = logging.StreamHandler()
+
+        info_handler = RotatingFileHandler(
+            os.path.join(self.log_dir, "bokdori.log"),
+            maxBytes=10*1024*1024,  # 10MB
+            backupCount=5
+        )
+        info_handler.setLevel(level_map.get(log_level.upper(), logging.INFO))
+
+        error_handler = RotatingFileHandler(
+            os.path.join(self.log_dir, "error.log"),
+            maxBytes=10*1024*1024,  # 10MB
+            backupCount=5
+        )
+        error_handler.setLevel(logging.ERROR)
+
         # 로그 설정
         logging.basicConfig(
             level=level_map.get(log_level.upper(), logging.INFO),
             format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
             handlers=[
-                # 콘솔 출력
-                logging.StreamHandler(),
-                # 파일 출력 (일반)
-                RotatingFileHandler(
-                    os.path.join(self.log_dir, "bokdori.log"),
-                    maxBytes=10*1024*1024,  # 10MB
-                    backupCount=5
-                ),
-                # 파일 출력 (오류)
-RotatingFileHandler(
-                    os.path.join(self.log_dir, "error.log"),
-                    maxBytes=10*1024*1024,  # 10MB
-                    backupCount=5,
-                    level=logging.ERROR
-                )
+                console_handler,
+                info_handler,
+                error_handler
             ]
         )
         

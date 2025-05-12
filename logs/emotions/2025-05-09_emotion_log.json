@@ -1,0 +1,29 @@
+[
+  {
+    "timestamp": "2025-05-09T12:01:02.605146",
+    "unix_timestamp": 1746759662,
+    "text": "안녕",
+    "dominant_emotion": "unknown",
+    "emotion_category": "unknown",
+    "confidence": 0.0,
+    "keywords": []
+  },
+  {
+    "timestamp": "2025-05-09T12:51:33.202362",
+    "unix_timestamp": 1746762693,
+    "text": "아파",
+    "dominant_emotion": "unknown",
+    "emotion_category": "unknown",
+    "confidence": 0.0,
+    "keywords": []
+  },
+  {
+    "timestamp": "2025-05-09T13:33:06.321572",
+    "unix_timestamp": 1746765186,
+    "text": "아파",
+    "dominant_emotion": "unknown",
+    "emotion_category": "unknown",
+    "confidence": 0.0,
+    "keywords": []
+  }
+]
