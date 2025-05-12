@@ -97,6 +97,20 @@ class EmotionAnalyzer:
         Returns:
             dict: 감정 분석 결과
         """
+        # 타입 검증 추가 (이 부분을 추가)
+        if not isinstance(text, str):
+            try:
+                text = str(text)
+                logger.warning(f"문자열이 아닌 입력을 문자열로 변환: {type(text).__name__} -> str")
+            except Exception as e:
+                logger.error(f"텍스트 변환 실패: {e}")
+                return {
+                    "dominant_emotion": "unknown",
+                    "emotion_scores": {},
+                    "emotion_category": "unknown",
+                    "confidence": 0.0
+                }
+            
         if not text or len(text) < 3:
             return {
                 "dominant_emotion": "unknown",

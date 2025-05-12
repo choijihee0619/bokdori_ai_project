@@ -1,5 +1,3 @@
-from langchain.embeddings.openai import OpenAIEmbeddings
-from langchain.embeddings.huggingface import HuggingFaceEmbeddings
 import os
 import logging
 from dotenv import load_dotenv
@@ -31,22 +29,39 @@ def get_embedding_model(config=None):
     
     logger.info(f"임베딩 모델 로드 중: provider={provider}, model={model_name}")
     
+    # API 키 환경 변수 확인
+    api_key = os.getenv("OPENAI_API_KEY")
+    if not api_key:
+        logger.warning("환경 변수에서 OPENAI_API_KEY를 찾을 수 없습니다.")
+    else:
+        key_type = "project" if api_key.startswith("sk-proj-") else "standard"
+        logger.info(f"API 키 유형: {key_type}")
+    
     if provider == "openai":
-        api_key = os.getenv("OPENAI_API_KEY")
-        if not api_key:
-            raise ValueError("OpenAI 임베딩을 사용하려면 OPENAI_API_KEY 환경 변수가 필요합니다.")
-        
-        return OpenAIEmbeddings(
-            model=model_name,
-            openai_api_key=api_key
-        )
+        try:
+            from langchain_openai import OpenAIEmbeddings
+            logger.info("langchain_openai 패키지 사용 중")
+            return OpenAIEmbeddings(
+                model=model_name
+                # API 키는 환경 변수에서 자동으로 로드
+            )
+        except Exception as e:
+            logger.error(f"OpenAI 임베딩 모델 초기화 실패: {e}")
+            raise
     
     elif provider == "huggingface":
-        return HuggingFaceEmbeddings(model_name=model_name)
+        try:
+            from langchain_huggingface import HuggingFaceEmbeddings
+            return HuggingFaceEmbeddings(model_name=model_name)
+        except Exception as e:
+            logger.error(f"HuggingFace 임베딩 모델 초기화 실패: {e}")
+            raise
     
     else:
         logger.warning(f"지원되지 않는 임베딩 제공자: {provider}. OpenAI 임베딩을 기본값으로 사용합니다.")
-        return OpenAIEmbeddings(
-            model="text-embedding-ada-002",
-            openai_api_key=os.getenv("OPENAI_API_KEY")
-        )
+        try:
+            from langchain_openai import OpenAIEmbeddings
+            return OpenAIEmbeddings(model=model_name)
+        except Exception as e:
+            logger.error(f"기본 임베딩 모델 초기화 실패: {e}")
+            raise

@@ -100,3 +100,463 @@
 2025-05-09 13:33:11,378 - __main__ - ERROR - 메시지 처리 중 오류 발생: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
 2025-05-09 13:34:11,186 - __main__ - INFO - 사용자 메시지 처리 중: '이름이 뭐야...'
 2025-05-09 13:34:11,187 - __main__ - ERROR - 예상치 못한 오류 발생: 'dict' object has no attribute 'lower'
+2025-05-12 14:05:15,086 - bokdori - INFO - 로거 초기화 완료
+2025-05-12 14:05:15,087 - __main__ - INFO - 복도리 AI 비서 초기화 중...
+2025-05-12 14:05:15,087 - modules.utils.helpers - INFO - 설정 파일 로드 완료: config/config.json
+2025-05-12 14:05:15,153 - modules.llm.openai_client - INFO - OpenAI 클라이언트 초기화 완료: 모델=gpt-3.5-turbo
+2025-05-12 14:05:15,206 - modules.langchain.chains - INFO - ChainManager 초기화 완료: model=gpt-3.5-turbo, temp=0.7
+2025-05-12 14:05:15,207 - modules.langchain.embeddings - INFO - 임베딩 모델 로드 중: provider=openai, model=text-embedding-ada-002
+2025-05-12 14:05:15,256 - modules.rag.chroma_client - INFO - ChromaManager 초기화 완료: collection=bokdori_knowledge, directory=./data/embeddings
+2025-05-12 14:05:15,256 - modules.phishing.detector - INFO - 보이스피싱 패턴 로드 완료: config/phishing_patterns.json
+2025-05-12 14:05:15,305 - modules.langchain.chains - INFO - ChainManager 초기화 완료: model=gpt-3.5-turbo, temp=0.7
+2025-05-12 14:05:15,305 - modules.phishing.detector - INFO - PhishingDetector 초기화 완료: threshold=0.7, 12 고위험 패턴 로드
+2025-05-12 14:05:15,306 - modules.emotion.analyzer - INFO - 감정 패턴 로드 완료: config/emotion_patterns.json
+2025-05-12 14:05:15,306 - modules.emotion.analyzer - INFO - EmotionAnalyzer 초기화 완료
+2025-05-12 14:05:15,306 - modules.emotion.trend_monitor - INFO - EmotionTrendMonitor 초기화 완료: logs/emotions
+2025-05-12 14:05:15,306 - modules.emotion.trend_monitor - INFO - EmotionTrendMonitor 초기화 완료: logs/emotions
+2025-05-12 14:05:15,306 - modules.emotion.alert_manager - INFO - AlertManager 초기화 완료: logs/alerts
+2025-05-12 14:05:15,306 - modules.rag.keyword_extractor - INFO - KeywordExtractor 초기화 완료
+2025-05-12 14:05:15,306 - modules.export.csv_exporter - INFO - LogExporter 초기화 완료: logs -> data/exports
+2025-05-12 14:05:15,306 - modules.rag.retriever - INFO - 검색기 생성 중...
+2025-05-12 14:05:15,306 - modules.langchain.embeddings - INFO - 임베딩 모델 로드 중: provider=openai, model=text-embedding-ada-002
+2025-05-12 14:05:15,354 - modules.rag.chroma_client - INFO - ChromaManager 초기화 완료: collection=bokdori_knowledge, directory=./data/embeddings
+2025-05-12 14:05:15,791 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-05-12 14:05:16,002 - modules.rag.chroma_client - INFO - 기존 Chroma DB 로드 완료: 7 문서
+2025-05-12 14:05:16,002 - modules.rag.retriever - INFO - 기본 검색기 생성 완료 (top_k=3)
+2025-05-12 14:05:16,002 - __main__ - INFO - 복도리 AI 비서 초기화 완료
+2025-05-12 14:05:23,716 - __main__ - INFO - 사용자 메시지 처리 중: '안녕 복도리야...'
+2025-05-12 14:05:23,716 - __main__ - ERROR - 예상치 못한 오류 발생: 'dict' object has no attribute 'lower'
+2025-05-12 14:06:33,687 - __main__ - INFO - 사용자 메시지 처리 중: '안녕하세요...'
+2025-05-12 14:06:33,688 - __main__ - ERROR - 예상치 못한 오류 발생: 'dict' object has no attribute 'lower'
+2025-05-12 16:23:35,180 - bokdori - INFO - 로거 초기화 완료
+2025-05-12 16:23:35,181 - __main__ - INFO - 복도리 AI 비서 초기화 중...
+2025-05-12 16:23:35,181 - modules.utils.helpers - INFO - 설정 파일 로드 완료: config/config.json
+2025-05-12 16:23:35,236 - modules.llm.openai_client - INFO - OpenAI 클라이언트 초기화 완료: 모델=gpt-3.5-turbo
+2025-05-12 16:23:35,318 - modules.langchain.chains - INFO - ChainManager 초기화 완료: model=gpt-3.5-turbo, temp=0.7
+2025-05-12 16:23:35,319 - modules.langchain.embeddings - INFO - 임베딩 모델 로드 중: provider=openai, model=text-embedding-ada-002
+2025-05-12 16:23:35,368 - modules.rag.chroma_client - INFO - ChromaManager 초기화 완료: collection=bokdori_knowledge, directory=./data/embeddings
+2025-05-12 16:23:35,369 - modules.phishing.detector - INFO - 보이스피싱 패턴 로드 완료: config/phishing_patterns.json
+2025-05-12 16:23:35,419 - modules.langchain.chains - INFO - ChainManager 초기화 완료: model=gpt-3.5-turbo, temp=0.7
+2025-05-12 16:23:35,419 - modules.phishing.detector - INFO - PhishingDetector 초기화 완료: threshold=0.7, 12 고위험 패턴 로드
+2025-05-12 16:23:35,419 - modules.emotion.analyzer - INFO - 감정 패턴 로드 완료: config/emotion_patterns.json
+2025-05-12 16:23:35,419 - modules.emotion.analyzer - INFO - EmotionAnalyzer 초기화 완료
+2025-05-12 16:23:35,419 - modules.emotion.trend_monitor - INFO - EmotionTrendMonitor 초기화 완료: logs/emotions
+2025-05-12 16:23:35,419 - modules.emotion.trend_monitor - INFO - EmotionTrendMonitor 초기화 완료: logs/emotions
+2025-05-12 16:23:35,420 - modules.emotion.alert_manager - INFO - AlertManager 초기화 완료: logs/alerts
+2025-05-12 16:23:35,420 - modules.rag.keyword_extractor - INFO - KeywordExtractor 초기화 완료
+2025-05-12 16:23:35,420 - modules.export.csv_exporter - INFO - LogExporter 초기화 완료: logs -> data/exports
+2025-05-12 16:23:35,420 - modules.rag.retriever - INFO - 검색기 생성 중...
+2025-05-12 16:23:35,420 - modules.langchain.embeddings - INFO - 임베딩 모델 로드 중: provider=openai, model=text-embedding-ada-002
+2025-05-12 16:23:35,469 - modules.rag.chroma_client - INFO - ChromaManager 초기화 완료: collection=bokdori_knowledge, directory=./data/embeddings
+2025-05-12 16:23:35,807 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-05-12 16:23:35,989 - modules.rag.chroma_client - INFO - 기존 Chroma DB 로드 완료: 7 문서
+2025-05-12 16:23:35,989 - modules.rag.retriever - INFO - 기본 검색기 생성 완료 (top_k=3)
+2025-05-12 16:23:35,990 - __main__ - INFO - 복도리 AI 비서 초기화 완료
+2025-05-12 16:23:40,804 - __main__ - INFO - 사용자 메시지 처리 중: '안녕하세요...'
+2025-05-12 16:23:40,805 - __main__ - ERROR - 예상치 못한 오류 발생: 'dict' object has no attribute 'lower'
+2025-05-12 16:31:44,777 - bokdori - INFO - 로거 초기화 완료
+2025-05-12 16:31:44,778 - __main__ - INFO - 복도리 AI 비서 초기화 중...
+2025-05-12 16:31:44,778 - modules.utils.helpers - INFO - 설정 파일 로드 완료: config/config.json
+2025-05-12 16:31:44,830 - modules.llm.openai_client - INFO - OpenAI 클라이언트 초기화 완료: 모델=gpt-3.5-turbo
+2025-05-12 16:31:44,881 - modules.langchain.chains - INFO - ChainManager 초기화 완료: model=gpt-3.5-turbo, temp=0.7
+2025-05-12 16:31:44,881 - modules.langchain.embeddings - INFO - 임베딩 모델 로드 중: provider=openai, model=text-embedding-ada-002
+2025-05-12 16:31:44,929 - modules.rag.chroma_client - INFO - ChromaManager 초기화 완료: collection=bokdori_knowledge, directory=./data/embeddings
+2025-05-12 16:31:44,930 - modules.phishing.detector - INFO - 보이스피싱 패턴 로드 완료: config/phishing_patterns.json
+2025-05-12 16:31:44,978 - modules.langchain.chains - INFO - ChainManager 초기화 완료: model=gpt-3.5-turbo, temp=0.7
+2025-05-12 16:31:44,978 - modules.phishing.detector - INFO - PhishingDetector 초기화 완료: threshold=0.7, 12 고위험 패턴 로드
+2025-05-12 16:31:44,979 - modules.emotion.analyzer - INFO - 감정 패턴 로드 완료: config/emotion_patterns.json
+2025-05-12 16:31:44,979 - modules.emotion.analyzer - INFO - EmotionAnalyzer 초기화 완료
+2025-05-12 16:31:44,979 - modules.emotion.trend_monitor - INFO - EmotionTrendMonitor 초기화 완료: logs/emotions
+2025-05-12 16:31:44,979 - modules.emotion.trend_monitor - INFO - EmotionTrendMonitor 초기화 완료: logs/emotions
+2025-05-12 16:31:44,979 - modules.emotion.alert_manager - INFO - AlertManager 초기화 완료: logs/alerts
+2025-05-12 16:31:44,979 - modules.rag.keyword_extractor - INFO - KeywordExtractor 초기화 완료
+2025-05-12 16:31:44,979 - modules.export.csv_exporter - INFO - LogExporter 초기화 완료: logs -> data/exports
+2025-05-12 16:31:44,979 - modules.rag.retriever - INFO - 검색기 생성 중...
+2025-05-12 16:31:44,979 - modules.langchain.embeddings - INFO - 임베딩 모델 로드 중: provider=openai, model=text-embedding-ada-002
+2025-05-12 16:31:45,028 - modules.rag.chroma_client - INFO - ChromaManager 초기화 완료: collection=bokdori_knowledge, directory=./data/embeddings
+2025-05-12 16:31:45,357 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-05-12 16:31:45,536 - modules.rag.chroma_client - INFO - 기존 Chroma DB 로드 완료: 7 문서
+2025-05-12 16:31:45,536 - modules.rag.retriever - INFO - 기본 검색기 생성 완료 (top_k=3)
+2025-05-12 16:31:45,536 - __main__ - INFO - 복도리 AI 비서 초기화 완료
+2025-05-12 16:31:51,494 - __main__ - INFO - 사용자 메시지 처리 중: '안녕하세요...'
+2025-05-12 16:31:51,494 - __main__ - ERROR - 보이스피싱 감지 중 오류: 'dict' object has no attribute 'lower'
+2025-05-12 16:31:54,104 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 401 Unauthorized"
+2025-05-12 16:31:54,106 - __main__ - ERROR - 메시지 처리 중 오류 발생: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************qlUA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-05-12 16:37:35,535 - bokdori - INFO - 로거 초기화 완료
+2025-05-12 16:37:35,536 - __main__ - INFO - 복도리 AI 비서 초기화 중...
+2025-05-12 16:37:35,536 - modules.utils.helpers - INFO - 설정 파일 로드 완료: config/config.json
+2025-05-12 16:37:35,598 - modules.llm.openai_client - INFO - OpenAI 클라이언트 초기화 완료: 모델=gpt-3.5-turbo
+2025-05-12 16:37:35,650 - modules.langchain.chains - INFO - ChainManager 초기화 완료: model=gpt-3.5-turbo, temp=0.7
+2025-05-12 16:37:35,650 - modules.langchain.embeddings - INFO - 임베딩 모델 로드 중: provider=openai, model=text-embedding-ada-002
+2025-05-12 16:37:35,698 - modules.rag.chroma_client - INFO - ChromaManager 초기화 완료: collection=bokdori_knowledge, directory=./data/embeddings
+2025-05-12 16:37:35,699 - modules.phishing.detector - INFO - 보이스피싱 패턴 로드 완료: config/phishing_patterns.json
+2025-05-12 16:37:35,751 - modules.langchain.chains - INFO - ChainManager 초기화 완료: model=gpt-3.5-turbo, temp=0.7
+2025-05-12 16:37:35,751 - modules.phishing.detector - INFO - PhishingDetector 초기화 완료: threshold=0.7, 12 고위험 패턴 로드
+2025-05-12 16:37:35,754 - modules.emotion.analyzer - INFO - 감정 패턴 로드 완료: config/emotion_patterns.json
+2025-05-12 16:37:35,756 - modules.emotion.analyzer - INFO - EmotionAnalyzer 초기화 완료
+2025-05-12 16:37:35,757 - modules.emotion.trend_monitor - INFO - EmotionTrendMonitor 초기화 완료: logs/emotions
+2025-05-12 16:37:35,757 - modules.emotion.trend_monitor - INFO - EmotionTrendMonitor 초기화 완료: logs/emotions
+2025-05-12 16:37:35,759 - modules.emotion.alert_manager - INFO - AlertManager 초기화 완료: logs/alerts
+2025-05-12 16:37:35,759 - modules.rag.keyword_extractor - INFO - KeywordExtractor 초기화 완료
+2025-05-12 16:37:35,759 - modules.export.csv_exporter - INFO - LogExporter 초기화 완료: logs -> data/exports
+2025-05-12 16:37:35,760 - modules.rag.retriever - INFO - 검색기 생성 중...
+2025-05-12 16:37:35,761 - modules.langchain.embeddings - INFO - 임베딩 모델 로드 중: provider=openai, model=text-embedding-ada-002
+2025-05-12 16:37:35,830 - modules.rag.chroma_client - INFO - ChromaManager 초기화 완료: collection=bokdori_knowledge, directory=./data/embeddings
+2025-05-12 16:37:36,402 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-05-12 16:37:36,591 - modules.rag.chroma_client - INFO - 기존 Chroma DB 로드 완료: 7 문서
+2025-05-12 16:37:36,591 - modules.rag.retriever - INFO - 기본 검색기 생성 완료 (top_k=3)
+2025-05-12 16:37:36,591 - __main__ - INFO - 복도리 AI 비서 초기화 완료
+2025-05-12 16:37:41,432 - __main__ - INFO - 사용자 메시지 처리 중: '안녕하세요...'
+2025-05-12 16:37:41,928 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 401 Unauthorized"
+2025-05-12 16:37:41,932 - __main__ - ERROR - 메시지 처리 중 오류 발생: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************qlUA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-05-12 16:44:22,162 - bokdori - INFO - 로거 초기화 완료
+2025-05-12 16:44:22,163 - __main__ - INFO - 복도리 AI 비서 초기화 중...
+2025-05-12 16:44:22,163 - modules.utils.helpers - INFO - 설정 파일 로드 완료: config/config.json
+2025-05-12 16:44:22,163 - modules.llm.openai_client - INFO - OpenAI API 키 유형: project
+2025-05-12 16:44:22,214 - modules.llm.openai_client - INFO - OpenAI 클라이언트 초기화 완료: 모델=gpt-3.5-turbo
+2025-05-12 16:44:22,377 - modules.langchain.chains - INFO - ChainManager 초기화 완료: model=gpt-3.5-turbo, temp=0.7
+2025-05-12 16:44:22,377 - modules.langchain.embeddings - INFO - 임베딩 모델 로드 중: provider=openai, model=text-embedding-ada-002
+2025-05-12 16:44:22,427 - modules.rag.chroma_client - INFO - ChromaManager 초기화 완료: collection=bokdori_knowledge, directory=./data/embeddings
+2025-05-12 16:44:22,427 - modules.phishing.detector - INFO - 보이스피싱 패턴 로드 완료: config/phishing_patterns.json
+2025-05-12 16:44:22,475 - modules.langchain.chains - INFO - ChainManager 초기화 완료: model=gpt-3.5-turbo, temp=0.7
+2025-05-12 16:44:22,475 - modules.phishing.detector - INFO - PhishingDetector 초기화 완료: threshold=0.7, 12 고위험 패턴 로드
+2025-05-12 16:44:22,476 - modules.emotion.analyzer - INFO - 감정 패턴 로드 완료: config/emotion_patterns.json
+2025-05-12 16:44:22,476 - modules.emotion.analyzer - INFO - EmotionAnalyzer 초기화 완료
+2025-05-12 16:44:22,476 - modules.emotion.trend_monitor - INFO - EmotionTrendMonitor 초기화 완료: logs/emotions
+2025-05-12 16:44:22,476 - modules.emotion.trend_monitor - INFO - EmotionTrendMonitor 초기화 완료: logs/emotions
+2025-05-12 16:44:22,476 - modules.emotion.alert_manager - INFO - AlertManager 초기화 완료: logs/alerts
+2025-05-12 16:44:22,476 - modules.rag.keyword_extractor - INFO - KeywordExtractor 초기화 완료
+2025-05-12 16:44:22,476 - modules.export.csv_exporter - INFO - LogExporter 초기화 완료: logs -> data/exports
+2025-05-12 16:44:22,476 - modules.rag.retriever - INFO - 검색기 생성 중...
+2025-05-12 16:44:22,476 - modules.langchain.embeddings - INFO - 임베딩 모델 로드 중: provider=openai, model=text-embedding-ada-002
+2025-05-12 16:44:22,524 - modules.rag.chroma_client - INFO - ChromaManager 초기화 완료: collection=bokdori_knowledge, directory=./data/embeddings
+2025-05-12 16:44:22,854 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-05-12 16:44:23,037 - modules.rag.chroma_client - INFO - 기존 Chroma DB 로드 완료: 7 문서
+2025-05-12 16:44:23,037 - modules.rag.retriever - INFO - 기본 검색기 생성 완료 (top_k=3)
+2025-05-12 16:44:23,037 - __main__ - INFO - 복도리 AI 비서 초기화 완료
+2025-05-12 16:44:29,027 - __main__ - INFO - 사용자 메시지 처리 중: '안녕하세요...'
+2025-05-12 16:44:29,606 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 401 Unauthorized"
+2025-05-12 16:44:29,610 - __main__ - ERROR - 메시지 처리 중 오류 발생: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************qlUA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-05-12 16:58:33,589 - bokdori - INFO - 로거 초기화 완료
+2025-05-12 16:58:33,589 - __main__ - INFO - 복도리 AI 비서 초기화 중...
+2025-05-12 16:58:33,590 - modules.utils.helpers - INFO - 설정 파일 로드 완료: config/config.json
+2025-05-12 16:58:33,590 - modules.llm.openai_client - INFO - OpenAI API 키 유형: project
+2025-05-12 16:58:33,655 - modules.llm.openai_client - INFO - OpenAI 클라이언트 초기화 완료: 모델=gpt-3.5-turbo
+2025-05-12 16:58:33,656 - modules.langchain.chains - INFO - API 키 형식 확인: sk-proj-AY...
+2025-05-12 16:58:33,676 - modules.langchain.chains - INFO - langchain.chat_models 패키지 사용 중
+2025-05-12 16:58:33,867 - modules.langchain.chains - INFO - ChainManager 초기화 완료: model=gpt-3.5-turbo, temp=0.7
+2025-05-12 16:58:33,867 - modules.langchain.embeddings - INFO - 임베딩 모델 로드 중: provider=openai, model=text-embedding-ada-002
+2025-05-12 16:58:33,867 - modules.langchain.embeddings - INFO - API 키 유형: project
+2025-05-12 16:58:33,875 - modules.langchain.embeddings - INFO - langchain_openai 패키지 사용 중
+2025-05-12 16:58:33,928 - modules.rag.chroma_client - INFO - ChromaManager 초기화 완료: collection=bokdori_knowledge, directory=./data/embeddings
+2025-05-12 16:58:33,929 - modules.phishing.detector - INFO - 보이스피싱 패턴 로드 완료: config/phishing_patterns.json
+2025-05-12 16:58:33,929 - modules.langchain.chains - INFO - API 키 형식 확인: sk-proj-AY...
+2025-05-12 16:58:33,930 - modules.langchain.chains - INFO - langchain.chat_models 패키지 사용 중
+2025-05-12 16:58:33,981 - modules.langchain.chains - INFO - ChainManager 초기화 완료: model=gpt-3.5-turbo, temp=0.7
+2025-05-12 16:58:33,981 - modules.phishing.detector - INFO - PhishingDetector 초기화 완료: threshold=0.7, 12 고위험 패턴 로드
+2025-05-12 16:58:33,983 - modules.emotion.analyzer - INFO - 감정 패턴 로드 완료: config/emotion_patterns.json
+2025-05-12 16:58:33,983 - modules.emotion.analyzer - INFO - EmotionAnalyzer 초기화 완료
+2025-05-12 16:58:33,983 - modules.emotion.trend_monitor - INFO - EmotionTrendMonitor 초기화 완료: logs/emotions
+2025-05-12 16:58:33,983 - modules.emotion.trend_monitor - INFO - EmotionTrendMonitor 초기화 완료: logs/emotions
+2025-05-12 16:58:33,983 - modules.emotion.alert_manager - INFO - AlertManager 초기화 완료: logs/alerts
+2025-05-12 16:58:33,984 - modules.rag.keyword_extractor - INFO - KeywordExtractor 초기화 완료
+2025-05-12 16:58:33,985 - modules.export.csv_exporter - INFO - LogExporter 초기화 완료: logs -> data/exports
+2025-05-12 16:58:33,985 - modules.rag.retriever - INFO - 검색기 생성 중...
+2025-05-12 16:58:33,985 - modules.langchain.embeddings - INFO - 임베딩 모델 로드 중: provider=openai, model=text-embedding-ada-002
+2025-05-12 16:58:33,985 - modules.langchain.embeddings - INFO - API 키 유형: project
+2025-05-12 16:58:33,985 - modules.langchain.embeddings - INFO - langchain_openai 패키지 사용 중
+2025-05-12 16:58:34,073 - modules.rag.chroma_client - INFO - ChromaManager 초기화 완료: collection=bokdori_knowledge, directory=./data/embeddings
+2025-05-12 16:58:34,453 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-05-12 16:58:34,646 - modules.rag.chroma_client - INFO - 기존 Chroma DB 로드 완료: 7 문서
+2025-05-12 16:58:34,646 - modules.rag.retriever - INFO - 기본 검색기 생성 완료 (top_k=3)
+2025-05-12 16:58:34,647 - __main__ - INFO - 복도리 AI 비서 초기화 완료
+2025-05-12 16:58:39,731 - __main__ - INFO - 사용자 메시지 처리 중: '안녕하세요...'
+2025-05-12 16:58:40,259 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 401 Unauthorized"
+2025-05-12 16:58:40,261 - __main__ - ERROR - 메시지 처리 중 오류 발생: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************qlUA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-05-12 17:19:23,180 - bokdori - INFO - 로거 초기화 완료
+2025-05-12 17:19:23,181 - __main__ - INFO - 복도리 AI 비서 초기화 중...
+2025-05-12 17:19:23,182 - modules.utils.helpers - INFO - 설정 파일 로드 완료: config/config.json
+2025-05-12 17:19:23,182 - modules.llm.openai_client - INFO - OpenAI API 키 유형: project
+2025-05-12 17:19:23,237 - modules.llm.openai_client - INFO - OpenAI 클라이언트 초기화 완료: 모델=gpt-3.5-turbo
+2025-05-12 17:19:23,237 - modules.langchain.chains - INFO - API 키 형식 확인: sk-proj-AY...
+2025-05-12 17:19:23,322 - modules.langchain.chains - INFO - langchain_openai 패키지 사용 중
+2025-05-12 17:19:23,492 - modules.langchain.chains - INFO - ChainManager 초기화 완료: model=gpt-3.5-turbo, temp=0.7
+2025-05-12 17:19:23,492 - modules.langchain.embeddings - INFO - 임베딩 모델 로드 중: provider=openai, model=text-embedding-ada-002
+2025-05-12 17:19:23,492 - modules.langchain.embeddings - INFO - API 키 유형: project
+2025-05-12 17:19:23,492 - modules.langchain.embeddings - INFO - langchain_openai 패키지 사용 중
+2025-05-12 17:19:23,540 - modules.rag.chroma_client - INFO - ChromaManager 초기화 완료: collection=bokdori_knowledge, directory=./data/embeddings
+2025-05-12 17:19:23,541 - modules.phishing.detector - INFO - 보이스피싱 패턴 로드 완료: config/phishing_patterns.json
+2025-05-12 17:19:23,541 - modules.langchain.chains - INFO - API 키 형식 확인: sk-proj-AY...
+2025-05-12 17:19:23,541 - modules.langchain.chains - INFO - langchain_openai 패키지 사용 중
+2025-05-12 17:19:23,590 - modules.langchain.chains - INFO - ChainManager 초기화 완료: model=gpt-3.5-turbo, temp=0.7
+2025-05-12 17:19:23,590 - modules.phishing.detector - INFO - PhishingDetector 초기화 완료: threshold=0.7, 12 고위험 패턴 로드
+2025-05-12 17:19:23,590 - modules.emotion.analyzer - INFO - 감정 패턴 로드 완료: config/emotion_patterns.json
+2025-05-12 17:19:23,590 - modules.emotion.analyzer - INFO - EmotionAnalyzer 초기화 완료
+2025-05-12 17:19:23,590 - modules.emotion.trend_monitor - INFO - EmotionTrendMonitor 초기화 완료: logs/emotions
+2025-05-12 17:19:23,591 - modules.emotion.trend_monitor - INFO - EmotionTrendMonitor 초기화 완료: logs/emotions
+2025-05-12 17:19:23,591 - modules.emotion.alert_manager - INFO - AlertManager 초기화 완료: logs/alerts
+2025-05-12 17:19:23,591 - modules.rag.keyword_extractor - INFO - KeywordExtractor 초기화 완료
+2025-05-12 17:19:23,591 - modules.export.csv_exporter - INFO - LogExporter 초기화 완료: logs -> data/exports
+2025-05-12 17:19:23,591 - modules.rag.retriever - INFO - 검색기 생성 중...
+2025-05-12 17:19:23,591 - modules.langchain.embeddings - INFO - 임베딩 모델 로드 중: provider=openai, model=text-embedding-ada-002
+2025-05-12 17:19:23,591 - modules.langchain.embeddings - INFO - API 키 유형: project
+2025-05-12 17:19:23,591 - modules.langchain.embeddings - INFO - langchain_openai 패키지 사용 중
+2025-05-12 17:19:23,639 - modules.rag.chroma_client - INFO - ChromaManager 초기화 완료: collection=bokdori_knowledge, directory=./data/embeddings
+2025-05-12 17:19:23,971 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-05-12 17:19:24,148 - modules.rag.chroma_client - INFO - 기존 Chroma DB 로드 완료: 7 문서
+2025-05-12 17:19:24,148 - modules.rag.retriever - INFO - 기본 검색기 생성 완료 (top_k=3)
+2025-05-12 17:19:24,148 - __main__ - INFO - 복도리 AI 비서 초기화 완료
+2025-05-12 17:19:28,395 - __main__ - INFO - 사용자 메시지 처리 중: '안녕하세요...'
+2025-05-12 17:19:28,842 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 401 Unauthorized"
+2025-05-12 17:19:28,844 - __main__ - ERROR - 메시지 처리 중 오류 발생: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************qlUA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-05-12 17:20:10,637 - bokdori - INFO - 로거 초기화 완료
+2025-05-12 17:20:10,638 - __main__ - INFO - 복도리 AI 비서 초기화 중...
+2025-05-12 17:20:10,638 - modules.utils.helpers - INFO - 설정 파일 로드 완료: config/config.json
+2025-05-12 17:20:10,638 - modules.llm.openai_client - INFO - OpenAI API 키 유형: project
+2025-05-12 17:20:10,689 - modules.llm.openai_client - INFO - OpenAI 클라이언트 초기화 완료: 모델=gpt-3.5-turbo
+2025-05-12 17:20:10,689 - modules.langchain.chains - INFO - API 키 형식 확인: sk-proj-AY...
+2025-05-12 17:20:10,766 - modules.langchain.chains - INFO - langchain_openai 패키지 사용 중
+2025-05-12 17:20:10,923 - modules.langchain.chains - INFO - ChainManager 초기화 완료: model=gpt-3.5-turbo, temp=0.7
+2025-05-12 17:20:10,923 - modules.langchain.embeddings - INFO - 임베딩 모델 로드 중: provider=openai, model=text-embedding-ada-002
+2025-05-12 17:20:10,923 - modules.langchain.embeddings - INFO - API 키 유형: project
+2025-05-12 17:20:10,923 - modules.langchain.embeddings - INFO - langchain_openai 패키지 사용 중
+2025-05-12 17:20:10,971 - modules.rag.chroma_client - INFO - ChromaManager 초기화 완료: collection=bokdori_knowledge, directory=./data/embeddings
+2025-05-12 17:20:10,972 - modules.phishing.detector - INFO - 보이스피싱 패턴 로드 완료: config/phishing_patterns.json
+2025-05-12 17:20:10,972 - modules.langchain.chains - INFO - API 키 형식 확인: sk-proj-AY...
+2025-05-12 17:20:10,972 - modules.langchain.chains - INFO - langchain_openai 패키지 사용 중
+2025-05-12 17:20:11,020 - modules.langchain.chains - INFO - ChainManager 초기화 완료: model=gpt-3.5-turbo, temp=0.7
+2025-05-12 17:20:11,021 - modules.phishing.detector - INFO - PhishingDetector 초기화 완료: threshold=0.7, 12 고위험 패턴 로드
+2025-05-12 17:20:11,021 - modules.emotion.analyzer - INFO - 감정 패턴 로드 완료: config/emotion_patterns.json
+2025-05-12 17:20:11,021 - modules.emotion.analyzer - INFO - EmotionAnalyzer 초기화 완료
+2025-05-12 17:20:11,021 - modules.emotion.trend_monitor - INFO - EmotionTrendMonitor 초기화 완료: logs/emotions
+2025-05-12 17:20:11,021 - modules.emotion.trend_monitor - INFO - EmotionTrendMonitor 초기화 완료: logs/emotions
+2025-05-12 17:20:11,021 - modules.emotion.alert_manager - INFO - AlertManager 초기화 완료: logs/alerts
+2025-05-12 17:20:11,021 - modules.rag.keyword_extractor - INFO - KeywordExtractor 초기화 완료
+2025-05-12 17:20:11,022 - modules.export.csv_exporter - INFO - LogExporter 초기화 완료: logs -> data/exports
+2025-05-12 17:20:11,022 - modules.rag.retriever - INFO - 검색기 생성 중...
+2025-05-12 17:20:11,022 - modules.langchain.embeddings - INFO - 임베딩 모델 로드 중: provider=openai, model=text-embedding-ada-002
+2025-05-12 17:20:11,022 - modules.langchain.embeddings - INFO - API 키 유형: project
+2025-05-12 17:20:11,022 - modules.langchain.embeddings - INFO - langchain_openai 패키지 사용 중
+2025-05-12 17:20:11,070 - modules.rag.chroma_client - INFO - ChromaManager 초기화 완료: collection=bokdori_knowledge, directory=./data/embeddings
+2025-05-12 17:20:11,368 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-05-12 17:20:11,469 - modules.rag.chroma_client - INFO - 기존 Chroma DB 로드 완료: 7 문서
+2025-05-12 17:20:11,469 - modules.rag.retriever - INFO - 기본 검색기 생성 완료 (top_k=3)
+2025-05-12 17:20:11,469 - __main__ - INFO - 복도리 AI 비서 초기화 완료
+2025-05-12 17:20:14,892 - __main__ - INFO - 사용자 메시지 처리 중: '\안녕하세요...'
+2025-05-12 17:20:15,484 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 401 Unauthorized"
+2025-05-12 17:20:15,487 - __main__ - ERROR - 메시지 처리 중 오류 발생: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************qlUA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-05-12 17:30:31,524 - bokdori - INFO - 로거 초기화 완료
+2025-05-12 17:30:31,525 - __main__ - INFO - 복도리 AI 비서 초기화 중...
+2025-05-12 17:30:31,525 - modules.utils.helpers - INFO - 설정 파일 로드 완료: config/config.json
+2025-05-12 17:30:31,525 - modules.llm.openai_client - INFO - OpenAI API 키 유형: project
+2025-05-12 17:30:31,638 - modules.llm.openai_client - INFO - OpenAI 클라이언트 초기화 완료: 모델=gpt-3.5-turbo
+2025-05-12 17:30:31,638 - modules.langchain.chains - INFO - API 키 형식 확인: sk-proj-s4...
+2025-05-12 17:30:31,717 - modules.langchain.chains - INFO - langchain_openai 패키지 사용 중
+2025-05-12 17:30:31,878 - modules.langchain.chains - INFO - ChainManager 초기화 완료: model=gpt-3.5-turbo, temp=0.7
+2025-05-12 17:30:31,878 - modules.langchain.embeddings - INFO - 임베딩 모델 로드 중: provider=openai, model=text-embedding-ada-002
+2025-05-12 17:30:31,878 - modules.langchain.embeddings - INFO - API 키 유형: project
+2025-05-12 17:30:31,878 - modules.langchain.embeddings - INFO - langchain_openai 패키지 사용 중
+2025-05-12 17:30:31,927 - modules.rag.chroma_client - INFO - ChromaManager 초기화 완료: collection=bokdori_knowledge, directory=./data/embeddings
+2025-05-12 17:30:31,927 - modules.phishing.detector - INFO - 보이스피싱 패턴 로드 완료: config/phishing_patterns.json
+2025-05-12 17:30:31,927 - modules.langchain.chains - INFO - API 키 형식 확인: sk-proj-s4...
+2025-05-12 17:30:31,927 - modules.langchain.chains - INFO - langchain_openai 패키지 사용 중
+2025-05-12 17:30:31,976 - modules.langchain.chains - INFO - ChainManager 초기화 완료: model=gpt-3.5-turbo, temp=0.7
+2025-05-12 17:30:31,976 - modules.phishing.detector - INFO - PhishingDetector 초기화 완료: threshold=0.7, 12 고위험 패턴 로드
+2025-05-12 17:30:31,977 - modules.emotion.analyzer - INFO - 감정 패턴 로드 완료: config/emotion_patterns.json
+2025-05-12 17:30:31,977 - modules.emotion.analyzer - INFO - EmotionAnalyzer 초기화 완료
+2025-05-12 17:30:31,977 - modules.emotion.trend_monitor - INFO - EmotionTrendMonitor 초기화 완료: logs/emotions
+2025-05-12 17:30:31,977 - modules.emotion.trend_monitor - INFO - EmotionTrendMonitor 초기화 완료: logs/emotions
+2025-05-12 17:30:31,977 - modules.emotion.alert_manager - INFO - AlertManager 초기화 완료: logs/alerts
+2025-05-12 17:30:31,977 - modules.rag.keyword_extractor - INFO - KeywordExtractor 초기화 완료
+2025-05-12 17:30:31,977 - modules.export.csv_exporter - INFO - LogExporter 초기화 완료: logs -> data/exports
+2025-05-12 17:30:31,977 - modules.rag.retriever - INFO - 검색기 생성 중...
+2025-05-12 17:30:31,977 - modules.langchain.embeddings - INFO - 임베딩 모델 로드 중: provider=openai, model=text-embedding-ada-002
+2025-05-12 17:30:31,977 - modules.langchain.embeddings - INFO - API 키 유형: project
+2025-05-12 17:30:31,977 - modules.langchain.embeddings - INFO - langchain_openai 패키지 사용 중
+2025-05-12 17:30:32,025 - modules.rag.chroma_client - INFO - ChromaManager 초기화 완료: collection=bokdori_knowledge, directory=./data/embeddings
+2025-05-12 17:30:32,331 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-05-12 17:30:32,456 - modules.rag.chroma_client - INFO - 기존 Chroma DB 로드 완료: 7 문서
+2025-05-12 17:30:32,456 - modules.rag.retriever - INFO - 기본 검색기 생성 완료 (top_k=3)
+2025-05-12 17:30:32,457 - __main__ - INFO - 복도리 AI 비서 초기화 완료
+2025-05-12 17:30:35,815 - __main__ - INFO - 사용자 메시지 처리 중: '안녕하세요...'
+2025-05-12 17:30:37,148 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-12 17:30:38,287 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-12 17:30:38,302 - __main__ - ERROR - 메시지 처리 중 오류 발생: Got multiple output keys: dict_keys(['answer', 'source_documents']), cannot determine which to store in memory. Please set the 'output_key' explicitly.
+2025-05-12 17:32:48,089 - bokdori - INFO - 로거 초기화 완료
+2025-05-12 17:32:48,089 - __main__ - INFO - 복도리 AI 비서 초기화 중...
+2025-05-12 17:32:48,090 - modules.utils.helpers - INFO - 설정 파일 로드 완료: config/config.json
+2025-05-12 17:32:48,090 - modules.llm.openai_client - INFO - OpenAI API 키 유형: project
+2025-05-12 17:32:48,141 - modules.llm.openai_client - INFO - OpenAI 클라이언트 초기화 완료: 모델=gpt-3.5-turbo
+2025-05-12 17:32:48,141 - modules.langchain.chains - INFO - API 키 형식 확인: sk-proj-s4...
+2025-05-12 17:32:48,220 - modules.langchain.chains - INFO - langchain_openai 패키지 사용 중
+2025-05-12 17:32:48,378 - modules.langchain.chains - INFO - ChainManager 초기화 완료: model=gpt-3.5-turbo, temp=0.7
+2025-05-12 17:32:48,378 - modules.langchain.embeddings - INFO - 임베딩 모델 로드 중: provider=openai, model=text-embedding-ada-002
+2025-05-12 17:32:48,378 - modules.langchain.embeddings - INFO - API 키 유형: project
+2025-05-12 17:32:48,378 - modules.langchain.embeddings - INFO - langchain_openai 패키지 사용 중
+2025-05-12 17:32:48,427 - modules.rag.chroma_client - INFO - ChromaManager 초기화 완료: collection=bokdori_knowledge, directory=./data/embeddings
+2025-05-12 17:32:48,428 - modules.phishing.detector - INFO - 보이스피싱 패턴 로드 완료: config/phishing_patterns.json
+2025-05-12 17:32:48,428 - modules.langchain.chains - INFO - API 키 형식 확인: sk-proj-s4...
+2025-05-12 17:32:48,428 - modules.langchain.chains - INFO - langchain_openai 패키지 사용 중
+2025-05-12 17:32:48,476 - modules.langchain.chains - INFO - ChainManager 초기화 완료: model=gpt-3.5-turbo, temp=0.7
+2025-05-12 17:32:48,477 - modules.phishing.detector - INFO - PhishingDetector 초기화 완료: threshold=0.7, 12 고위험 패턴 로드
+2025-05-12 17:32:48,477 - modules.emotion.analyzer - INFO - 감정 패턴 로드 완료: config/emotion_patterns.json
+2025-05-12 17:32:48,477 - modules.emotion.analyzer - INFO - EmotionAnalyzer 초기화 완료
+2025-05-12 17:32:48,477 - modules.emotion.trend_monitor - INFO - EmotionTrendMonitor 초기화 완료: logs/emotions
+2025-05-12 17:32:48,477 - modules.emotion.trend_monitor - INFO - EmotionTrendMonitor 초기화 완료: logs/emotions
+2025-05-12 17:32:48,477 - modules.emotion.alert_manager - INFO - AlertManager 초기화 완료: logs/alerts
+2025-05-12 17:32:48,477 - modules.rag.keyword_extractor - INFO - KeywordExtractor 초기화 완료
+2025-05-12 17:32:48,477 - modules.export.csv_exporter - INFO - LogExporter 초기화 완료: logs -> data/exports
+2025-05-12 17:32:48,478 - modules.rag.retriever - INFO - 검색기 생성 중...
+2025-05-12 17:32:48,478 - modules.langchain.embeddings - INFO - 임베딩 모델 로드 중: provider=openai, model=text-embedding-ada-002
+2025-05-12 17:32:48,478 - modules.langchain.embeddings - INFO - API 키 유형: project
+2025-05-12 17:32:48,478 - modules.langchain.embeddings - INFO - langchain_openai 패키지 사용 중
+2025-05-12 17:32:48,526 - modules.rag.chroma_client - INFO - ChromaManager 초기화 완료: collection=bokdori_knowledge, directory=./data/embeddings
+2025-05-12 17:32:48,822 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-05-12 17:32:48,919 - modules.rag.chroma_client - INFO - 기존 Chroma DB 로드 완료: 7 문서
+2025-05-12 17:32:48,919 - modules.rag.retriever - INFO - 기본 검색기 생성 완료 (top_k=3)
+2025-05-12 17:32:48,919 - __main__ - INFO - 복도리 AI 비서 초기화 완료
+2025-05-12 17:32:54,853 - __main__ - INFO - 사용자 메시지 처리 중: '안녕하세요...'
+2025-05-12 17:32:54,862 - modules.langchain.chains - ERROR - RAG 체인 생성 실패: 1 validation error for ConversationalRetrievalChain
+memory_key
+  Extra inputs are not permitted [type=extra_forbidden, input_value='chat_history', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/extra_forbidden
+2025-05-12 17:32:54,862 - __main__ - ERROR - 메시지 처리 중 오류 발생: 1 validation error for ConversationalRetrievalChain
+memory_key
+  Extra inputs are not permitted [type=extra_forbidden, input_value='chat_history', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/extra_forbidden
+2025-05-12 17:37:41,676 - bokdori - INFO - 로거 초기화 완료
+2025-05-12 17:37:41,677 - __main__ - INFO - 복도리 AI 비서 초기화 중...
+2025-05-12 17:37:41,677 - modules.utils.helpers - INFO - 설정 파일 로드 완료: config/config.json
+2025-05-12 17:37:41,677 - modules.llm.openai_client - INFO - OpenAI API 키 유형: project
+2025-05-12 17:37:41,729 - modules.llm.openai_client - INFO - OpenAI 클라이언트 초기화 완료: 모델=gpt-3.5-turbo
+2025-05-12 17:37:41,729 - modules.langchain.chains - INFO - API 키 형식 확인: sk-proj-s4...
+2025-05-12 17:37:41,807 - modules.langchain.chains - INFO - langchain_openai 패키지 사용 중
+2025-05-12 17:37:42,013 - modules.langchain.chains - INFO - ChainManager 초기화 완료: model=gpt-3.5-turbo, temp=0.7
+2025-05-12 17:37:42,013 - modules.langchain.embeddings - INFO - 임베딩 모델 로드 중: provider=openai, model=text-embedding-ada-002
+2025-05-12 17:37:42,013 - modules.langchain.embeddings - INFO - API 키 유형: project
+2025-05-12 17:37:42,013 - modules.langchain.embeddings - INFO - langchain_openai 패키지 사용 중
+2025-05-12 17:37:42,061 - modules.rag.chroma_client - INFO - ChromaManager 초기화 완료: collection=bokdori_knowledge, directory=./data/embeddings
+2025-05-12 17:37:42,062 - modules.phishing.detector - INFO - 보이스피싱 패턴 로드 완료: config/phishing_patterns.json
+2025-05-12 17:37:42,062 - modules.langchain.chains - INFO - API 키 형식 확인: sk-proj-s4...
+2025-05-12 17:37:42,063 - modules.langchain.chains - INFO - langchain_openai 패키지 사용 중
+2025-05-12 17:37:42,111 - modules.langchain.chains - INFO - ChainManager 초기화 완료: model=gpt-3.5-turbo, temp=0.7
+2025-05-12 17:37:42,111 - modules.phishing.detector - INFO - PhishingDetector 초기화 완료: threshold=0.7, 12 고위험 패턴 로드
+2025-05-12 17:37:42,112 - modules.emotion.analyzer - INFO - 감정 패턴 로드 완료: config/emotion_patterns.json
+2025-05-12 17:37:42,112 - modules.emotion.analyzer - INFO - EmotionAnalyzer 초기화 완료
+2025-05-12 17:37:42,112 - modules.emotion.trend_monitor - INFO - EmotionTrendMonitor 초기화 완료: logs/emotions
+2025-05-12 17:37:42,112 - modules.emotion.trend_monitor - INFO - EmotionTrendMonitor 초기화 완료: logs/emotions
+2025-05-12 17:37:42,112 - modules.emotion.alert_manager - INFO - AlertManager 초기화 완료: logs/alerts
+2025-05-12 17:37:42,112 - modules.rag.keyword_extractor - INFO - KeywordExtractor 초기화 완료
+2025-05-12 17:37:42,112 - modules.export.csv_exporter - INFO - LogExporter 초기화 완료: logs -> data/exports
+2025-05-12 17:37:42,112 - modules.rag.retriever - INFO - 검색기 생성 중...
+2025-05-12 17:37:42,112 - modules.langchain.embeddings - INFO - 임베딩 모델 로드 중: provider=openai, model=text-embedding-ada-002
+2025-05-12 17:37:42,112 - modules.langchain.embeddings - INFO - API 키 유형: project
+2025-05-12 17:37:42,113 - modules.langchain.embeddings - INFO - langchain_openai 패키지 사용 중
+2025-05-12 17:37:42,161 - modules.rag.chroma_client - INFO - ChromaManager 초기화 완료: collection=bokdori_knowledge, directory=./data/embeddings
+2025-05-12 17:37:42,467 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-05-12 17:37:42,568 - modules.rag.chroma_client - INFO - 기존 Chroma DB 로드 완료: 7 문서
+2025-05-12 17:37:42,568 - modules.rag.retriever - INFO - 기본 검색기 생성 완료 (top_k=3)
+2025-05-12 17:37:42,568 - __main__ - INFO - 복도리 AI 비서 초기화 완료
+2025-05-12 17:37:46,506 - __main__ - INFO - 사용자 메시지 처리 중: '안녕하세요...'
+2025-05-12 17:37:46,512 - __main__ - ERROR - 메시지 처리 중 오류 발생: 'RunnableBinding' object is not callable
+2025-05-12 17:42:32,497 - bokdori - INFO - 로거 초기화 완료
+2025-05-12 17:42:32,498 - __main__ - INFO - 복도리 AI 비서 초기화 중...
+2025-05-12 17:42:32,498 - modules.utils.helpers - INFO - 설정 파일 로드 완료: config/config.json
+2025-05-12 17:42:32,498 - modules.llm.openai_client - INFO - OpenAI API 키 유형: project
+2025-05-12 17:42:32,550 - modules.llm.openai_client - INFO - OpenAI 클라이언트 초기화 완료: 모델=gpt-3.5-turbo
+2025-05-12 17:42:32,550 - modules.langchain.chains - INFO - API 키 형식 확인: sk-proj-s4...
+2025-05-12 17:42:32,628 - modules.langchain.chains - INFO - langchain_openai 패키지 사용 중
+2025-05-12 17:42:32,789 - modules.langchain.chains - INFO - ChainManager 초기화 완료: model=gpt-3.5-turbo, temp=0.7
+2025-05-12 17:42:32,789 - modules.langchain.embeddings - INFO - 임베딩 모델 로드 중: provider=openai, model=text-embedding-ada-002
+2025-05-12 17:42:32,789 - modules.langchain.embeddings - INFO - API 키 유형: project
+2025-05-12 17:42:32,789 - modules.langchain.embeddings - INFO - langchain_openai 패키지 사용 중
+2025-05-12 17:42:32,837 - modules.rag.chroma_client - INFO - ChromaManager 초기화 완료: collection=bokdori_knowledge, directory=./data/embeddings
+2025-05-12 17:42:32,838 - modules.phishing.detector - INFO - 보이스피싱 패턴 로드 완료: config/phishing_patterns.json
+2025-05-12 17:42:32,838 - modules.langchain.chains - INFO - API 키 형식 확인: sk-proj-s4...
+2025-05-12 17:42:32,838 - modules.langchain.chains - INFO - langchain_openai 패키지 사용 중
+2025-05-12 17:42:32,886 - modules.langchain.chains - INFO - ChainManager 초기화 완료: model=gpt-3.5-turbo, temp=0.7
+2025-05-12 17:42:32,886 - modules.phishing.detector - INFO - PhishingDetector 초기화 완료: threshold=0.7, 12 고위험 패턴 로드
+2025-05-12 17:42:32,887 - modules.emotion.analyzer - INFO - 감정 패턴 로드 완료: config/emotion_patterns.json
+2025-05-12 17:42:32,887 - modules.emotion.analyzer - INFO - EmotionAnalyzer 초기화 완료
+2025-05-12 17:42:32,887 - modules.emotion.trend_monitor - INFO - EmotionTrendMonitor 초기화 완료: logs/emotions
+2025-05-12 17:42:32,887 - modules.emotion.trend_monitor - INFO - EmotionTrendMonitor 초기화 완료: logs/emotions
+2025-05-12 17:42:32,887 - modules.emotion.alert_manager - INFO - AlertManager 초기화 완료: logs/alerts
+2025-05-12 17:42:32,887 - modules.rag.keyword_extractor - INFO - KeywordExtractor 초기화 완료
+2025-05-12 17:42:32,887 - modules.export.csv_exporter - INFO - LogExporter 초기화 완료: logs -> data/exports
+2025-05-12 17:42:32,887 - modules.rag.retriever - INFO - 검색기 생성 중...
+2025-05-12 17:42:32,887 - modules.langchain.embeddings - INFO - 임베딩 모델 로드 중: provider=openai, model=text-embedding-ada-002
+2025-05-12 17:42:32,887 - modules.langchain.embeddings - INFO - API 키 유형: project
+2025-05-12 17:42:32,887 - modules.langchain.embeddings - INFO - langchain_openai 패키지 사용 중
+2025-05-12 17:42:32,935 - modules.rag.chroma_client - INFO - ChromaManager 초기화 완료: collection=bokdori_knowledge, directory=./data/embeddings
+2025-05-12 17:42:33,237 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-05-12 17:42:33,333 - modules.rag.chroma_client - INFO - 기존 Chroma DB 로드 완료: 7 문서
+2025-05-12 17:42:33,333 - modules.rag.retriever - INFO - 기본 검색기 생성 완료 (top_k=3)
+2025-05-12 17:42:33,334 - __main__ - INFO - 복도리 AI 비서 초기화 완료
+2025-05-12 17:42:39,054 - __main__ - INFO - 사용자 메시지 처리 중: '안녕하세요...'
+2025-05-12 17:42:40,082 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-12 17:42:40,091 - __main__ - ERROR - 메시지 처리 중 오류 발생: "Input to ChatPromptTemplate is missing variables {'question'}.  Expected: ['context', 'question'] Received: ['input', 'context']\nNote: if you intended {question} to be part of the string and not a variable, please escape it with double curly braces like: '{{question}}'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT "
+2025-05-12 17:46:12,137 - bokdori - INFO - 로거 초기화 완료
+2025-05-12 17:46:12,138 - __main__ - INFO - 복도리 AI 비서 초기화 중...
+2025-05-12 17:46:12,138 - modules.utils.helpers - INFO - 설정 파일 로드 완료: config/config.json
+2025-05-12 17:46:12,138 - modules.llm.openai_client - INFO - OpenAI API 키 유형: project
+2025-05-12 17:46:12,190 - modules.llm.openai_client - INFO - OpenAI 클라이언트 초기화 완료: 모델=gpt-3.5-turbo
+2025-05-12 17:46:12,190 - modules.langchain.chains - INFO - API 키 형식 확인: sk-proj-s4...
+2025-05-12 17:46:12,272 - modules.langchain.chains - INFO - langchain_openai 패키지 사용 중
+2025-05-12 17:46:12,438 - modules.langchain.chains - INFO - ChainManager 초기화 완료: model=gpt-3.5-turbo, temp=0.7
+2025-05-12 17:46:12,439 - modules.langchain.embeddings - INFO - 임베딩 모델 로드 중: provider=openai, model=text-embedding-ada-002
+2025-05-12 17:46:12,439 - modules.langchain.embeddings - INFO - API 키 유형: project
+2025-05-12 17:46:12,439 - modules.langchain.embeddings - INFO - langchain_openai 패키지 사용 중
+2025-05-12 17:46:12,486 - modules.rag.chroma_client - INFO - ChromaManager 초기화 완료: collection=bokdori_knowledge, directory=./data/embeddings
+2025-05-12 17:46:12,487 - modules.phishing.detector - INFO - 보이스피싱 패턴 로드 완료: config/phishing_patterns.json
+2025-05-12 17:46:12,487 - modules.langchain.chains - INFO - API 키 형식 확인: sk-proj-s4...
+2025-05-12 17:46:12,487 - modules.langchain.chains - INFO - langchain_openai 패키지 사용 중
+2025-05-12 17:46:12,535 - modules.langchain.chains - INFO - ChainManager 초기화 완료: model=gpt-3.5-turbo, temp=0.7
+2025-05-12 17:46:12,535 - modules.phishing.detector - INFO - PhishingDetector 초기화 완료: threshold=0.7, 12 고위험 패턴 로드
+2025-05-12 17:46:12,536 - modules.emotion.analyzer - INFO - 감정 패턴 로드 완료: config/emotion_patterns.json
+2025-05-12 17:46:12,536 - modules.emotion.analyzer - INFO - EmotionAnalyzer 초기화 완료
+2025-05-12 17:46:12,536 - modules.emotion.trend_monitor - INFO - EmotionTrendMonitor 초기화 완료: logs/emotions
+2025-05-12 17:46:12,536 - modules.emotion.trend_monitor - INFO - EmotionTrendMonitor 초기화 완료: logs/emotions
+2025-05-12 17:46:12,536 - modules.emotion.alert_manager - INFO - AlertManager 초기화 완료: logs/alerts
+2025-05-12 17:46:12,536 - modules.rag.keyword_extractor - INFO - KeywordExtractor 초기화 완료
+2025-05-12 17:46:12,536 - modules.export.csv_exporter - INFO - LogExporter 초기화 완료: logs -> data/exports
+2025-05-12 17:46:12,537 - modules.rag.retriever - INFO - 검색기 생성 중...
+2025-05-12 17:46:12,537 - modules.langchain.embeddings - INFO - 임베딩 모델 로드 중: provider=openai, model=text-embedding-ada-002
+2025-05-12 17:46:12,537 - modules.langchain.embeddings - INFO - API 키 유형: project
+2025-05-12 17:46:12,537 - modules.langchain.embeddings - INFO - langchain_openai 패키지 사용 중
+2025-05-12 17:46:12,585 - modules.rag.chroma_client - INFO - ChromaManager 초기화 완료: collection=bokdori_knowledge, directory=./data/embeddings
+2025-05-12 17:46:12,895 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-05-12 17:46:13,014 - modules.rag.chroma_client - INFO - 기존 Chroma DB 로드 완료: 7 문서
+2025-05-12 17:46:13,014 - modules.rag.retriever - INFO - 기본 검색기 생성 완료 (top_k=3)
+2025-05-12 17:46:13,015 - __main__ - INFO - 복도리 AI 비서 초기화 완료
+2025-05-12 17:46:18,030 - __main__ - INFO - 사용자 메시지 처리 중: '안녕하세요...'
+2025-05-12 17:46:19,009 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-12 17:46:20,057 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-12 17:46:20,072 - __main__ - INFO - 메시지 처리 완료: 2.0초
+2025-05-12 17:46:29,289 - __main__ - INFO - 사용자 메시지 처리 중: '허리가 아파...'
+2025-05-12 17:46:29,975 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-12 17:46:31,711 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-12 17:46:31,715 - __main__ - INFO - 메시지 처리 완료: 2.4초
+2025-05-12 17:46:37,737 - __main__ - INFO - 사용자 메시지 처리 중: '너 이름이 뭐야...'
+2025-05-12 17:46:38,470 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-12 17:46:39,189 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-12 17:46:39,194 - __main__ - INFO - 메시지 처리 완료: 1.5초
+2025-05-12 17:46:47,474 - __main__ - INFO - 사용자 메시지 처리 중: '아들이 보고싶어...'
+2025-05-12 17:46:48,135 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-12 17:46:49,301 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-12 17:46:49,310 - __main__ - INFO - 메시지 처리 완료: 1.8초
+2025-05-12 17:46:52,718 - __main__ - INFO - 사용자 메시지 처리 중: '우울...'
+2025-05-12 17:46:53,029 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-12 17:46:54,854 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-12 17:46:54,859 - __main__ - INFO - 메시지 처리 완료: 2.1초
+2025-05-12 17:46:54,860 - modules.emotion.trend_monitor - ERROR - 로그 처리 중 오류: 'unknown', 로그: {'timestamp': '2025-05-09T12:01:02.605146', 'unix_timestamp': 1746759662, 'text': '안녕', 'dominant_emotion': 'unknown', 'emotion_category': 'unknown', 'confidence': 0.0, 'keywords': []}
+2025-05-12 17:46:54,861 - modules.emotion.trend_monitor - ERROR - 로그 처리 중 오류: 'unknown', 로그: {'timestamp': '2025-05-09T12:51:33.202362', 'unix_timestamp': 1746762693, 'text': '아파', 'dominant_emotion': 'unknown', 'emotion_category': 'unknown', 'confidence': 0.0, 'keywords': []}
+2025-05-12 17:46:54,861 - modules.emotion.trend_monitor - ERROR - 로그 처리 중 오류: 'unknown', 로그: {'timestamp': '2025-05-09T13:33:06.321572', 'unix_timestamp': 1746765186, 'text': '아파', 'dominant_emotion': 'unknown', 'emotion_category': 'unknown', 'confidence': 0.0, 'keywords': []}
+2025-05-12 17:46:54,861 - modules.emotion.trend_monitor - ERROR - 로그 처리 중 오류: 'unknown', 로그: {'timestamp': '2025-05-12T17:46:52.718569', 'unix_timestamp': 1747039612, 'text': '우울', 'dominant_emotion': 'unknown', 'emotion_category': 'unknown', 'confidence': 0.0, 'keywords': []}
+2025-05-12 17:47:25,122 - __main__ - INFO - 사용자 메시지 처리 중: '송금...'
+2025-05-12 17:47:25,499 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-12 17:47:26,598 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-12 17:47:26,602 - __main__ - INFO - 메시지 처리 완료: 1.5초
+2025-05-12 17:47:30,390 - __main__ - INFO - 사용자 메시지 처리 중: '날씨...'
+2025-05-12 17:47:30,694 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-12 17:47:31,862 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-12 17:47:31,880 - __main__ - INFO - 메시지 처리 완료: 1.5초

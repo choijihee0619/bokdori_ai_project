@@ -15,15 +15,16 @@ class OpenAIClient:
     def __init__(self, api_key=None, model_name="gpt-3.5-turbo"):
         """
         OpenAI API 클라이언트 초기화
-        
-        Args:
-            api_key (str, optional): OpenAI API 키. 기본값은 환경 변수에서 로드
-            model_name (str, optional): 사용할 모델명. 기본값은 'gpt-3.5-turbo'
         """
         self.api_key = api_key or os.getenv("OPENAI_API_KEY")
         if not self.api_key:
             raise ValueError("OpenAI API 키가 필요합니다. .env 파일이나 생성자에 제공해주세요.")
         
+        # API 키 확인 로그
+        key_type = "project" if self.api_key.startswith("sk-proj-") else "personal"
+        logger.info(f"OpenAI API 키 유형: {key_type}")
+        
+        # 최신 OpenAI 클라이언트 사용
         self.client = OpenAI(api_key=self.api_key)
         self.model_name = model_name
         logger.info(f"OpenAI 클라이언트 초기화 완료: 모델={self.model_name}")

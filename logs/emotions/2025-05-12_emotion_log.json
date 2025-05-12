@@ -1,0 +1,155 @@
+[
+  {
+    "timestamp": "2025-05-12T16:31:51.499158",
+    "unix_timestamp": 1747035111,
+    "text": "안녕하세요",
+    "dominant_emotion": "neutral",
+    "emotion_category": "neutral",
+    "confidence": 0.0,
+    "keywords": []
+  },
+  {
+    "timestamp": "2025-05-12T16:37:41.438639",
+    "unix_timestamp": 1747035461,
+    "text": "안녕하세요",
+    "dominant_emotion": "neutral",
+    "emotion_category": "neutral",
+    "confidence": 0.0,
+    "keywords": []
+  },
+  {
+    "timestamp": "2025-05-12T16:44:29.033373",
+    "unix_timestamp": 1747035869,
+    "text": "안녕하세요",
+    "dominant_emotion": "neutral",
+    "emotion_category": "neutral",
+    "confidence": 0.0,
+    "keywords": []
+  },
+  {
+    "timestamp": "2025-05-12T16:58:39.736799",
+    "unix_timestamp": 1747036719,
+    "text": "안녕하세요",
+    "dominant_emotion": "neutral",
+    "emotion_category": "neutral",
+    "confidence": 0.0,
+    "keywords": []
+  },
+  {
+    "timestamp": "2025-05-12T17:19:28.400865",
+    "unix_timestamp": 1747037968,
+    "text": "안녕하세요",
+    "dominant_emotion": "neutral",
+    "emotion_category": "neutral",
+    "confidence": 0.0,
+    "keywords": []
+  },
+  {
+    "timestamp": "2025-05-12T17:20:14.898018",
+    "unix_timestamp": 1747038014,
+    "text": "\\안녕하세요",
+    "dominant_emotion": "neutral",
+    "emotion_category": "neutral",
+    "confidence": 0.0,
+    "keywords": []
+  },
+  {
+    "timestamp": "2025-05-12T17:30:35.822088",
+    "unix_timestamp": 1747038635,
+    "text": "안녕하세요",
+    "dominant_emotion": "neutral",
+    "emotion_category": "neutral",
+    "confidence": 0.0,
+    "keywords": []
+  },
+  {
+    "timestamp": "2025-05-12T17:32:54.860115",
+    "unix_timestamp": 1747038774,
+    "text": "안녕하세요",
+    "dominant_emotion": "neutral",
+    "emotion_category": "neutral",
+    "confidence": 0.0,
+    "keywords": []
+  },
+  {
+    "timestamp": "2025-05-12T17:37:46.509734",
+    "unix_timestamp": 1747039066,
+    "text": "안녕하세요",
+    "dominant_emotion": "neutral",
+    "emotion_category": "neutral",
+    "confidence": 0.0,
+    "keywords": []
+  },
+  {
+    "timestamp": "2025-05-12T17:42:39.060977",
+    "unix_timestamp": 1747039359,
+    "text": "안녕하세요",
+    "dominant_emotion": "neutral",
+    "emotion_category": "neutral",
+    "confidence": 0.0,
+    "keywords": []
+  },
+  {
+    "timestamp": "2025-05-12T17:46:18.037760",
+    "unix_timestamp": 1747039578,
+    "text": "안녕하세요",
+    "dominant_emotion": "neutral",
+    "emotion_category": "neutral",
+    "confidence": 0.0,
+    "keywords": []
+  },
+  {
+    "timestamp": "2025-05-12T17:46:29.291170",
+    "unix_timestamp": 1747039589,
+    "text": "허리가 아파",
+    "dominant_emotion": "neutral",
+    "emotion_category": "neutral",
+    "confidence": 0.0,
+    "keywords": []
+  },
+  {
+    "timestamp": "2025-05-12T17:46:37.738700",
+    "unix_timestamp": 1747039597,
+    "text": "너 이름이 뭐야",
+    "dominant_emotion": "neutral",
+    "emotion_category": "neutral",
+    "confidence": 0.0,
+    "keywords": []
+  },
+  {
+    "timestamp": "2025-05-12T17:46:47.475644",
+    "unix_timestamp": 1747039607,
+    "text": "아들이 보고싶어",
+    "dominant_emotion": "neutral",
+    "emotion_category": "neutral",
+    "confidence": 0.0,
+    "keywords": []
+  },
+  {
+    "timestamp": "2025-05-12T17:46:52.718569",
+    "unix_timestamp": 1747039612,
+    "text": "우울",
+    "dominant_emotion": "unknown",
+    "emotion_category": "unknown",
+    "confidence": 0.0,
+    "keywords": []
+  },
+  {
+    "timestamp": "2025-05-12T17:47:25.123948",
+    "unix_timestamp": 1747039645,
+    "text": "송금",
+    "dominant_emotion": "unknown",
+    "emotion_category": "unknown",
+    "confidence": 0.0,
+    "keywords": []
+  },
+  {
+    "timestamp": "2025-05-12T17:47:30.392000",
+    "unix_timestamp": 1747039650,
+    "text": "날씨",
+    "dominant_emotion": "unknown",
+    "emotion_category": "unknown",
+    "confidence": 0.0,
+    "keywords": []
+  }
+]

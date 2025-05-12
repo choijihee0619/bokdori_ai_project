@@ -82,12 +82,20 @@ class BokdoriAI:
         self.conversation_history.append(user_input)
         
         # 보이스피싱 감지
-        phishing_result = self.phishing_detector.detect(user_input)
-        app_logger.log_phishing_detection(user_input, phishing_result)
+        try:
+            phishing_result = self.phishing_detector.detect(user_input)
+            app_logger.log_phishing_detection(user_input, phishing_result)
+        except Exception as e:
+            logger.error(f"보이스피싱 감지 중 오류: {e}")
+            phishing_result = {"is_phishing": False, "risk_level": "unknown", "score": 0, "keywords": [], "explanation": "감지 오류"}
         
         # 감정 분석
-        emotion_result = self.emotion_analyzer.analyze_text(user_input)
-        app_logger.log_emotion(user_input, emotion_result)
+        try:
+            emotion_result = self.emotion_analyzer.analyze_text(user_input)
+            app_logger.log_emotion(user_input, emotion_result)
+        except Exception as e:
+            logger.error(f"감정 분석 중 오류: {e}")
+            emotion_result = {"dominant_emotion": "unknown", "emotion_category": "neutral", "confidence": 0.0, "keywords": []}
         
         # 위험도가 높은 보이스피싱 감지 시
         if phishing_result.get("is_phishing", False):
@@ -119,12 +127,17 @@ class BokdoriAI:
         try:
             # RAG 또는 일반 대화 처리
             if use_rag and self.retriever:
-                # RAG 체인으로 처리
-                result = self.chain_manager.get_rag_chain(self.retriever)({
-                    "question": user_input
+                # RAG 체인으로 처리 - 최신 LangChain API 사용
+                rag_chain = self.chain_manager.get_rag_chain(self.retriever)
+                result = rag_chain.invoke({
+                    "input": user_input
                 })
                 
-                ai_response = result.get("answer", "죄송합니다. 응답을 생성하는 데 문제가 발생했습니다.")
+                ai_response = result.get("answer", "")
+                if not ai_response:  # 'answer' 키가 없거나 비어있으면 다른 키 확인
+                    ai_response = result.get("response", "")
+                if not ai_response:  # 여전히 비어있으면 'result' 키 확인
+                    ai_response = result.get("result", "죄송합니다. 응답을 생성하는 데 문제가 발생했습니다.")
                 
                 # 소스 문서 정보 추가 (선택적)
                 source_docs = result.get("source_documents", [])
@@ -135,11 +148,16 @@ class BokdoriAI:
                         ai_response += f"\n{i}. {os.path.basename(source)}"
             else:
                 # 일반 대화 체인으로 처리
-                result = self.chain_manager.get_conversation_chain()({
-                    "question": user_input
+                conversation_chain = self.chain_manager.get_conversation_chain()
+                result = conversation_chain.invoke({
+                    "input": user_input
                 })
                 
-                ai_response = result.get("text", "죄송합니다. 응답을 생성하는 데 문제가 발생했습니다.")
+                ai_response = result.get("text", "")
+                if not ai_response:
+                    ai_response = result.get("response", "")
+                if not ai_response:
+                    ai_response = result.get("output", "죄송합니다. 응답을 생성하는 데 문제가 발생했습니다.")
             
             # 처리 시간 측정
             processing_time = time.time() - start_time

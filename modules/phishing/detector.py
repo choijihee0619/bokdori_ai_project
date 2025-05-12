@@ -82,6 +82,15 @@ class PhishingDetector:
         Returns:
             dict: 감지 결과
         """
+        # 타입 검증 추가
+        if not isinstance(text, str):
+            try:
+                text = str(text)
+                logger.warning(f"문자열이 아닌 입력을 문자열로 변환: {type(text).__name__} -> str")
+            except Exception as e:
+                logger.error(f"텍스트 변환 실패: {e}")
+                return {"risk_level": "unknown", "score": 0, "keywords": [], "explanation": "유효하지 않은 텍스트 형식입니다."}
+        
         if not text or len(text) < 5:
             return {"risk_level": "unknown", "score": 0, "keywords": [], "explanation": "텍스트가 너무 짧습니다."}
         
@@ -98,6 +107,10 @@ class PhishingDetector:
         # 키워드 검색
         for level, keywords in self.patterns.items():
             for keyword in keywords:
+                # 키워드 타입 검증 추가
+                if not isinstance(keyword, str):
+                    continue
+                
                 if keyword.lower() in normalized_text:
                     detected_keywords[level].append(keyword)
         
@@ -151,6 +164,15 @@ class PhishingDetector:
         Returns:
             dict: 감지 결과
         """
+        # 타입 검증 추가
+        if not isinstance(text, str):
+            try:
+                text = str(text)
+                logger.warning(f"문자열이 아닌 입력을 문자열로 변환: {type(text).__name__} -> str")
+            except Exception as e:
+                logger.error(f"텍스트 변환 실패: {e}")
+                return {"risk_level": "unknown", "score": 0, "keywords": [], "explanation": "유효하지 않은 텍스트 형식입니다."}
+        
         if not text or len(text) < 10:
             return {"risk_level": "unknown", "score": 0, "keywords": [], "explanation": "텍스트가 너무 짧습니다."}
         
@@ -182,6 +204,20 @@ class PhishingDetector:
         Returns:
             dict: 구조화된 결과
         """
+        # 타입 검증 추가
+        if not isinstance(result, str):
+            try:
+                result = str(result)
+                logger.warning(f"문자열이 아닌 LLM 결과를 문자열로 변환: {type(result).__name__} -> str")
+            except Exception as e:
+                logger.error(f"LLM 결과 변환 실패: {e}")
+                return {
+                    "risk_level": "unknown",
+                    "score": 0,
+                    "keywords": [],
+                    "explanation": "분석 결과를 해석할 수 없습니다."
+                }
+        
         try:
             # 기본값 설정
             parsed = {
@@ -194,7 +230,10 @@ class PhishingDetector:
             # 확률 추출 시도
             probability_match = re.search(r'확률[:\s]*([0-9.]+)', result)
             if probability_match:
-                parsed["score"] = float(probability_match.group(1))
+                try:
+                    parsed["score"] = float(probability_match.group(1))
+                except (ValueError, TypeError):
+                    parsed["score"] = 0
             
             # 위험 수준 추출 시도
             level_match = re.search(r'위험[^:]*[:\s]*(안전|주의|경고|위험)', result)
@@ -241,6 +280,22 @@ class PhishingDetector:
         Returns:
             dict: 감지 결과
         """
+        # 타입 검증 추가
+        if not isinstance(text, str):
+            try:
+                text = str(text)
+                logger.warning(f"문자열이 아닌 입력을 문자열로 변환: {type(text).__name__} -> str")
+            except Exception as e:
+                logger.error(f"텍스트 변환 실패: {e}")
+                return {
+                    "is_phishing": False,
+                    "risk_level": "unknown",
+                    "score": 0,
+                    "keywords": [],
+                    "explanation": "유효하지 않은 텍스트 형식입니다.",
+                    "method": "none"
+                }
+        
         # 규칙 기반 분석
         pattern_result = self.detect_with_patterns(text)
         
@@ -260,7 +315,22 @@ class PhishingDetector:
         
         # 결합된 결과
         combined_score = max(pattern_result["score"], llm_result["score"])
-        combined_keywords = list(set(pattern_result["keywords"] + llm_result["keywords"]))
+        
+        # 키워드 타입 안전성 확보
+        pattern_keywords = pattern_result.get("keywords", []) or []
+        llm_keywords = llm_result.get("keywords", []) or []
+        
+        # 리스트가 아닌 경우 빈 리스트로 처리
+        if not isinstance(pattern_keywords, list):
+            pattern_keywords = []
+        if not isinstance(llm_keywords, list):
+            llm_keywords = []
+        
+        # 키워드 합치기 (중복 제거)
+        combined_keywords = []
+        for keyword in pattern_keywords + llm_keywords:
+            if isinstance(keyword, str) and keyword not in combined_keywords:
+                combined_keywords.append(keyword)
         
         # 위험 수준 결정
         if combined_score >= self.threshold:
@@ -277,7 +347,15 @@ class PhishingDetector:
             is_phishing = False
         
         # 설명 선택 (LLM 설명 우선)
-        explanation = llm_result["explanation"] if llm_result["explanation"] != "분석 결과를 해석할 수 없습니다." else pattern_result["explanation"]
+        llm_explanation = llm_result.get("explanation", "")
+        pattern_explanation = pattern_result.get("explanation", "")
+        
+        if not isinstance(llm_explanation, str):
+            llm_explanation = ""
+        if not isinstance(pattern_explanation, str):
+            pattern_explanation = ""
+        
+        explanation = llm_explanation if llm_explanation and llm_explanation != "분석 결과를 해석할 수 없습니다." else pattern_explanation
         
         return {
             "is_phishing": is_phishing,

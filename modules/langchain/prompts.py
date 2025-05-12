@@ -24,11 +24,11 @@ def get_conversation_prompt():
 이전 대화 기록:
 {chat_history}
 
-사용자: {question}
+사용자: {input}
 복도리: """
     
     return PromptTemplate(
-        input_variables=["chat_history", "question"],
+        input_variables=["chat_history", "input"],
         template=template
     )
 
@@ -55,7 +55,7 @@ def get_rag_prompt():
     
     system_message_prompt = SystemMessagePromptTemplate.from_template(system_template)
     
-    human_template = "{question}"
+    human_template = "{input}"
     human_message_prompt = HumanMessagePromptTemplate.from_template(human_template)
     
     chat_prompt = ChatPromptTemplate.from_messages([
